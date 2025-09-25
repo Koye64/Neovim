@@ -12,11 +12,16 @@ vim.lsp.enable('tinymist')
 
 ---@diagnostic disable: need-check-nil
 vim.api.nvim_create_autocmd('LspAttach', {
-  callback = function(ev)
-    local client = vim.lsp.get_client_by_id(ev.data.client_id)
+  callback = function(cb_args)
+    local client = vim.lsp.get_client_by_id(cb_args.data.client_id)
     if client:supports_method('textDocument/completion') then
-      vim.opt.completeopt = { 'menu', 'menuone', 'noinsert', 'fuzzy', 'popup' }
-      vim.lsp.completion.enable(true, client.id, ev.buf, { autotrigger = true })
+      vim.opt.completeopt = { 'menu', 'menuone', 'fuzzy', 'popup' }
+      vim.lsp.completion.enable(
+        true,
+        client.id,
+        cb_args.buf,
+        { autotrigger = true }
+      )
       vim.keymap.set('i', '<C-Space>', function()
         vim.lsp.completion.get()
       end)
