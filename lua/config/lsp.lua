@@ -10,6 +10,7 @@ vim.lsp.enable('rust_analyzer')
 vim.lsp.enable('texlab')
 vim.lsp.enable('tinymist')
 
+---@diagnostic disable: need-check-nil
 vim.api.nvim_create_autocmd('LspAttach', {
   callback = function(ev)
     local client = vim.lsp.get_client_by_id(ev.data.client_id)
