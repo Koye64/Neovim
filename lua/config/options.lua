@@ -22,7 +22,7 @@ local opts = {
   termguicolors = true,
   undofile = true,
   undolevels = 1000,
-  winborder = 'rounded',
+  winborder = 'none',
   wrap = false,
 }
 local globals = {
