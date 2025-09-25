@@ -10,5 +10,4 @@ require('plugins.treesitter')
 require('plugins.indent-blankline')
 require('plugins.mini')
 require('plugins.gitsigns')
-require('plugins.which-key')
 
