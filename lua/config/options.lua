@@ -1,20 +1,20 @@
 local opts = {
-  colorcolumn = "80",
+  colorcolumn = '80',
   conceallevel = 2,
   confirm = true,
   cursorline = true,
   expandtab = true,
-  fillchars = { eob = " " },
-  fo = "crqwanvblj",
+  fillchars = { eob = ' ' },
+  fo = 'crqwanvblj',
   list = true,
-  mouse = "a",
+  mouse = 'a',
   number = true,
   relativenumber = true,
   scrolloff = 4,
   shiftround = true,
   shiftwidth = 2,
   sidescrolloff = 4,
-  signcolumn = "yes",
+  signcolumn = 'yes',
   smartcase = true,
   smartindent = true,
   tabstop = 2,
@@ -24,8 +24,8 @@ local opts = {
   wrap = false,
 }
 local globals = {
-  mapleader = " ",
-  maplocalleader = "\\",
+  mapleader = ' ',
+  maplocalleader = '\\',
 }
 
 for k, v in pairs(opts) do
