@@ -19,7 +19,7 @@ require("nvim-treesitter.configs").setup({
 
 vim.api.nvim_create_autocmd('PackChanged', {
   desc = 'Update nvim-treesitter',
-  group = vim.api.nvim_create_autogroup('nvim-treesitter-updater', { clear = true }),
+  group = vim.api.nvim_create_augroup('nvim-treesitter-updater', { clear = true }),
   callback = function(event)
     if event.data.kind == 'update' then
       vim.notify('nvim-treesitter updated, running TSUpdate...', vim.log.levels.INFO)
