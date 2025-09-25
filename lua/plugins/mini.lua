@@ -18,7 +18,7 @@ require('mini.pairs').setup({
     ['$'] = {
       action = 'closeopen',
       pair = '$$',
-      neigh_pattern = '[^\\][^0-9]'
+      neigh_pattern = '[^%a\\][^0-9]'
     },
     ["'"] = {
       action = 'closeopen',
