@@ -1,4 +1,5 @@
 local opts = {
+  clipboard = "unnamedplus",
   colorcolumn = '80',
   conceallevel = 2,
   confirm = true,
