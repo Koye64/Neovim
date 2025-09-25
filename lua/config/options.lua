@@ -21,6 +21,7 @@ local opts = {
   termguicolors = true,
   undofile = true,
   undolevels = 1000,
+  winborder = 'rounded',
   wrap = false,
 }
 local globals = {
