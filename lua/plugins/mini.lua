@@ -15,11 +15,6 @@ require('mini.bracketed').setup()
 require('mini.move').setup()
 require('mini.pairs').setup({
   mappings = {
-    ['$'] = {
-      action = 'closeopen',
-      pair = '$$',
-      neigh_pattern = '[^%a\\][^0-9]'
-    },
     ["'"] = {
       action = 'closeopen',
       pair = "''",
@@ -39,3 +34,13 @@ require('mini.surround').setup({
     highlight = '',
   },
 })
+
+vim.api.nvim_create_autocmd(
+  'FileType',
+  {
+    pattern = '*.tex,*.typ',
+    callback = function()
+      MiniPairs.map_buf(0, 'i', '$', { action = 'closeopen', pair = '$$' })
+    end,
+  }
+)
