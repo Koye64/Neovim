@@ -1,5 +1,5 @@
 vim.pack.add({
-  { src='https://github.com/nvim-mini/mini.nvim' },
+  { src = 'https://github.com/nvim-mini/mini.nvim' },
 })
 
 -- Text Editing
@@ -39,4 +39,3 @@ require('mini.surround').setup({
     highlight = '',
   },
 })
-

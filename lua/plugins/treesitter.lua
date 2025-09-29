@@ -1,7 +1,7 @@
 vim.pack.add({
   {
-    src = "https://github.com/nvim-treesitter/nvim-treesitter",
-    version = "master"
+    src = 'https://github.com/nvim-treesitter/nvim-treesitter',
+    version = 'master'
   }
 })
 
@@ -34,4 +34,3 @@ vim.api.nvim_create_autocmd('PackChanged', {
     end
   end,
 })
-
