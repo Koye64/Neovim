@@ -13,6 +13,8 @@ vim.lsp.enable('rust_analyzer')
 vim.lsp.enable('texlab')
 vim.lsp.enable('tinymist')
 
+vim.lsp.config['qmlls'].cmd = { "qmlls6" }
+
 vim.api.nvim_create_autocmd('LspAttach', {
   group = vim.api.nvim_create_augroup('my.lsp', {}),
   callback = function(args)
