@@ -24,8 +24,8 @@ vim.api.nvim_create_autocmd('LspAttach', {
     if client:supports_method('textDocument/completion') then
       vim.opt.completeopt = { 'menu', 'menuone', 'noinsert', 'fuzzy', 'popup' }
       -- Optional: trigger autocompletion on EVERY keypress. May be slow!
-      local chars = {}; for i = 32, 126 do table.insert(chars, string.char(i)) end
-      client.server_capabilities.completionProvider.triggerCharacters = chars
+      -- local chars = {}; for i = 32, 126 do table.insert(chars, string.char(i)) end
+      -- client.server_capabilities.completionProvider.triggerCharacters = chars
       vim.lsp.completion.enable(true, client.id, args.buf, { autotrigger = true })
       vim.keymap.set('i', '<c-space>', function()
         vim.lsp.completion.get()
