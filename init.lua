@@ -6,6 +6,7 @@ require('config.lsp')
 
 -- Plugins
 require('plugins.colorscheme')
+require('plugins.oil-nvim')
 require('plugins.treesitter')
 require('plugins.indent-blankline')
 require('plugins.mini')
